@@ -137,3 +137,15 @@ Paid execution is a **separate** authenticated MCP/REST process, using a buyer-i
 For safety boundaries and exact MCP handshake, see [the Agent Marketplace integration guide](docs/AGENT_MARKETPLACE.md). For [OpenAI Agents SDK/API, LangChain/LangGraph, CrewAI and official Python MCP SDK](docs/FRAMEWORK_INTEGRATIONS.md), see the discovery-only examples in [`examples/frameworks/`](examples/frameworks/).
 
 **Money truth:** Service availability, public listings and checkout creation do not prove external purchases, credit settlement, fulfillment, or withdrawable funds.
+
+---
+
+## GXEON STARTER — live storefront and TensorBlock discovery
+
+[![Indexed on TensorBlock MCP Index](https://mcp-index.tensorblock.co/v1/servers/github-xpex-systems-ai-gxeon-wallet-command-center-b8a311f5/badge.svg)](https://www.tensorblock.co/mcp/servers/github-xpex-systems-ai-gxeon-wallet-command-center-b8a311f5)
+
+**[Buy the live GXEON STARTER pack — 100 credits for R$ 20.00](https://gxeon-wallet-command-center.vercel.app/credits?pack=pack_100)**  ·  [Full buyer guide and evidence requirements](docs/GXEON-STARTER-COMMERCE.md)
+
+Our public MCP supports discovery only; a buyer must initiate an authenticated purchase and approve Stripe checkout. Credits become spendable only after verified settlement. Indexing, link clicks, checkout creation, and product listings are **not** proof of a completed sale.
+
+**Verified source:** the live `/v1/billing/topup` catalog currently lists `pack_100` at 2,000 BRL cents. Confirm pricing at checkout. The TensorBlock community merged our index entry via [PR #2949](https://github.com/TensorBlock/awesome-mcp-servers/pull/2949); the profile still needs maintainer claiming and richer metadata before it should be advertised as fully verified.
