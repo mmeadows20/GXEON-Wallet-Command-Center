@@ -175,6 +175,7 @@ describe('Signed credit payment fulfillment', () => {
     const store = getAgentEconomyStore();
     await store.saveAccount(seed);
     const payments = paymentStore();
+    const recordEventSpy = vi.spyOn(payments, 'recordEventIfAbsent');
     const service = new VercelStripeService({ store: payments, webhookSecret: testSecret });
 
     for (const [id, productId, amount, currency] of [
@@ -191,7 +192,7 @@ describe('Signed credit payment fulfillment', () => {
     }
     expect((await store.getAccount(seed.accountId))?.creditBalance).toBe(0);
     expect(await store.getLedgerEntries(seed.accountId)).toHaveLength(0);
-    expect(payments.recordEventIfAbsent).toHaveBeenCalledTimes(2);
+    expect(recordEventSpy).toHaveBeenCalledTimes(2);
   });
 
   it('reverses partial then full refunds once, even when credits have already been spent', async () => {
