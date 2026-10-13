@@ -148,6 +148,6 @@ For safety boundaries and exact MCP handshake, see [the Agent Marketplace integr
 
 **[Inspect GXEON STARTER pack selection (R$ 20.00; payment not yet cleared for unattended fulfillment)](https://gxeon-wallet-command-center.vercel.app/credits?pack=pack_100)**  ·  [Full buyer guide and evidence requirements](docs/GXEON-STARTER-COMMERCE.md)
 
-Our public MCP supports discovery only; a buyer must initiate an authenticated purchase and approve Stripe checkout. Credits become spendable only after verified settlement. Indexing, link clicks, checkout creation, and product listings are **not** proof of a completed sale.
+Our public MCP supports discovery only. First-time buyers initiate checkout without an existing API key by supplying the pack and their name; account creation and issuance of a buyer API key follow the first-purchase onboarding flow. Subsequent top-ups require authentication using that buyer-issued key. Every checkout requires the buyer's explicit approval. Credits become spendable only after verified settlement and an account-bound, idempotent credit grant. Indexing, link clicks, checkout creation, and product listings are **not** proof of a completed sale.
 
 **Verified source:** the live `/v1/billing/topup` catalog currently lists `pack_100` at 2,000 BRL cents. Confirm pricing at checkout. The TensorBlock community merged our index entry via [PR #2949](https://github.com/TensorBlock/awesome-mcp-servers/pull/2949); the profile still needs maintainer claiming and richer metadata before it should be advertised as fully verified.
