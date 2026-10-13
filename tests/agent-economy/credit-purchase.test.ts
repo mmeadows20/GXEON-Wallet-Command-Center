@@ -89,6 +89,17 @@ describe('Credit purchase onboarding', () => {
     }
   });
 
+  it('fails closed for an unattended production top-up until webhook release is enabled', async () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    vi.stubEnv('VITEST', '');
+    vi.stubEnv('GXEON_PREPAID_CHECKOUT_ENABLED', '');
+    const res = response();
+    await topup({ method: 'POST', headers: {}, body: { packId: 'pack_100', name: 'Unattended Buyer' } }, res);
+    expect(res.statusCode).toBe(503);
+    expect(res.body.error.code).toBe('PAYMENT_RAIL_UNAVAILABLE');
+    expect(mocks.create).not.toHaveBeenCalled();
+  });
+
   it('creates a R$0.99 PICO checkout without granting credits early', async () => {
     const res = response();
     await topup({ method: 'POST', headers: {}, body: { packId: 'pack_2', name: 'Pico Buyer' } }, res);
