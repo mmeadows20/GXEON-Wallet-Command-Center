@@ -1,5 +1,7 @@
 # GXEON STARTER — 100 API credits for R$ 20
 
+> ⚠️ **CHECKOUT-TO-CREDIT LIVE NOT CERTIFIED — DO NOT PROMOTE AS AUTOMATICALLY FULFILLED** (audit of Oct 13, 2026). The Stripe LIVE webhook `https://gxeon-wallet-command-center.vercel.app/api/stripe/webhook` was found `disabled` in Xmente I.A. The `GET` method returns 405 as expected, which only proves route existence; it does NOT prove successful Stripe signature processing, environment configuration or credit fulfillment. **Before onboarding real buyers for unattended delivery**, a human operator must verify the deployed webhook signing secret by comparing Stripe's endpoint configuration with a securely configured Vercel environment (without exposing either value), validate an end-to-end test-origin event/credit grant/replay/refund with one account, and authorize enabling the correct LIVE endpoint. Existing Stripe Plugin Factory webhook is a distinct product; do not repoint or reuse it as GXEON credits settlement. Any already completed real purchases require individual reconciliation and explicit fulfillment review.
+
 > **Official public offer • XPeX Systems AI / GXEON**  
 > Read-only public discovery. Purchases are customer-initiated; API execution requires authentication and a settled credit balance.
 
