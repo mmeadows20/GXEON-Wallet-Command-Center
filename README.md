@@ -140,11 +140,13 @@ For safety boundaries and exact MCP handshake, see [the Agent Marketplace integr
 
 ---
 
-## GXEON STARTER — live storefront and TensorBlock discovery
+## GXEON STARTER — storefront discoverability (settlement review pending)
+
+> ⚠️ **Do not promote unattended prepaid fulfillment yet.** The GXEON Stripe LIVE webhook is currently **disabled**, so automatic credit delivery has NOT been certified. The existing link is for operator review until the signing secret, genuine event, account-bound credit grant, replay and refund tests are independently verified, then the right endpoint is deliberately enabled.
 
 [![Indexed on TensorBlock MCP Index](https://mcp-index.tensorblock.co/v1/servers/github-xpex-systems-ai-gxeon-wallet-command-center-b8a311f5/badge.svg)](https://www.tensorblock.co/mcp/servers/github-xpex-systems-ai-gxeon-wallet-command-center-b8a311f5)
 
-**[Buy the live GXEON STARTER pack — 100 credits for R$ 20.00](https://gxeon-wallet-command-center.vercel.app/credits?pack=pack_100)**  ·  [Full buyer guide and evidence requirements](docs/GXEON-STARTER-COMMERCE.md)
+**[Inspect GXEON STARTER pack selection (R$ 20.00; payment not yet cleared for unattended fulfillment)](https://gxeon-wallet-command-center.vercel.app/credits?pack=pack_100)**  ·  [Full buyer guide and evidence requirements](docs/GXEON-STARTER-COMMERCE.md)
 
 Our public MCP supports discovery only; a buyer must initiate an authenticated purchase and approve Stripe checkout. Credits become spendable only after verified settlement. Indexing, link clicks, checkout creation, and product listings are **not** proof of a completed sale.
 
