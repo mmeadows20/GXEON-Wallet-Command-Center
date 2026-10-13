@@ -43,6 +43,21 @@ Use combinations of services within the same available credit balance.
 
 Public MCP tools let agents discover capabilities, inspect credit packs, plan purchases and read the buyer guide. **They cannot charge a payment method or confer free credits.** The purchased service operates through a distinct authenticated and metered surface, subject to authorization and credit availability.
 
+## Separate LIVE sales already available: supervised services
+
+The prepaid-credit machine checkout above is **NOT** approved for automatic fulfillment while GXEON's dedicated LIVE webhook remains disabled. For external human clients who agree to scoped **human-supervised** delivery, Xmente I.A already has these distinct active Stripe LIVE links:
+
+| Offer | Price | Existing Stripe LIVE payment link | Fulfillment |
+|---|---:|---|---|
+| [GXEON Quick Fix](https://buy.stripe.com/bJeeVd45Zgrp5EFdeV1B60b) | R$ 49.00 | `plink_1UKpGBHDcsx7lyooXYeQg6Al` | A human reviews the problem, delivery scope, payment confirmation and planned single technical fix |
+| [GXEON Audit Engineer — Piloto Supervisionado](https://buy.stripe.com/aFacN58mf8YXgjj0s91B60g) | R$ 497.00 | `plink_1UPCJMHDcsx7lyooR1D1d1kI` | A human agrees to read-only authorized project scope, technical evidence and prioritized remediation report |
+
+These payment links were verified active in the connected Stripe LIVE merchant on Oct 13, 2026, and their line items match the above BRL amounts. They **do not** automatically provision machine credits. Customers should understand delivery depends on operator contact, authorized project access, mutually agreed timelines and scope. Do not accept an unattended technical delivery SLA or claim automatic result provisioning.
+
+Prior to beginning any work, reconcile the real Stripe captured/paid charge against the correct order/customer and confirm onboarding requirements without requesting passwords or unscoped API keys. Set up a clear buyer follow-up after first purchase; 0 paid charges were present at the previous audit.
+
+---
+
 ## Evidence-first commercial acceptance checklist
 
 These statements are **not** proof of revenue:
