@@ -27,7 +27,7 @@ export default async function handler(req: any, res: any) {
   // Never sell prepaid credits unattended until the Stripe webhook has been
   // validated and explicitly cleared by the operator. Local Vitest fixtures
   // bypass this production-only gate so the unit suite remains hermetic.
-  const testFixture = process.env.NODE_ENV === 'test' || Boolean(process.env.VITEST);
+  const testFixture = process.env.NODE_ENV === 'test';
   if (!testFixture && process.env.GXEON_PREPAID_CHECKOUT_ENABLED !== 'true') {
     sendError(res, 503, 'PAYMENT_RAIL_UNAVAILABLE', 'Compra automática temporariamente indisponível: aguardando validação segura do pagamento.');
     return;
