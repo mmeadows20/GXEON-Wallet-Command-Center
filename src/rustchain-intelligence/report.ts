@@ -14,7 +14,7 @@ export function renderContributionReport(summary: ContributionSummary): string {
     `| Pending | ${summary.pendingRtc} |`,
     `| Confirmed | ${summary.confirmedRtc} |`,
     '',
-    'Confirmed RTC requires ledger evidence with a transaction hash. A claim, acceptance, pending id, or announced transfer is never counted as confirmed by itself.',
+    'Confirmed RTC requires an independently verified official RustChain wallet transfer matching wallet, transaction hash, credited amount and bounty/grant identity. Caller-asserted ledger flags, a claim, approval or pending transfer are never proof of payment.',
   ];
   return lines.join('\n');
 }
