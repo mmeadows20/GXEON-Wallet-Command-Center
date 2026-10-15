@@ -54,7 +54,7 @@ PR #47 includes a GitHub issue/comment connector, an authority-aware contributio
 **Independent reviewer checklist (not self-certification):**
 1. Verify source identities and grant approval against the upstream maintainer thread or direct maintainer response.
 2. Run `npm test -- --run src/rustchain-intelligence/reconcile.test.ts`, `npm run build` and any project CI gates.
-3. Inspect the native-ledger evidence ingestion boundary: **do not trust caller-asserted** `{source:'ledger', confirmed:true, txHash:'...'}` as evidence without a verified official RustChain response.
+3. Recheck the patched `reconcileContributionWithOfficialWallet()` proof boundary in PR #47. It requests the authoritative wallet history and checks wallet ID, transfer direction/status, transaction hash, award identity, claimant and credited amount. **The patch is awaiting independent CI/reviewer certification; it must not be self-approved.**
 4. Check wallet ID, amount, tx hash, confirmation status and award identity match exactly, without double counting confirmed/hosted balances.
 5. Require maintainer/human reviewer acceptance of grant deliverables before treating the second tranche as a payout due.
 
